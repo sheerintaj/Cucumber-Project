@@ -2,12 +2,11 @@ package runner;
 
 
 import org.junit.runner.RunWith;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 /**
- * Created by duongnapham on 3/2/15.
+ * Created by sheerin on 10/1/2020.
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false,
@@ -19,7 +18,8 @@ plugin = {
         "pretty",
         "json:build/cucumber-report/cucumber.json",
         "html:build/cucumber-report/cucumber.html",
-        "junit:build/cucumber-report/cucumber.xml"}
+        "junit:build/cucumber-report/cucumber.xml",
+        "com.epam.reportportal.cucumber.StepReporter"}
                 )
 public class SampleRunner {
 

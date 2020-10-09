@@ -16,6 +16,13 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+   maven{
+   url "http://dl.bintray.com/epam/reportportal"
+   }
+   
+    
+   
+   
 }
 
 dependencies {
@@ -30,7 +37,11 @@ dependencies {
     
     compile 'io.cucumber:cucumber-java:6.7.0'
     compile 'io.cucumber:cucumber-junit:6.7.0'
+    //compile 'com.epam.reportportal:agent-java-cucumber:4.0.0'
+    implementation 'com.epam.reportportal:agent-java-cucumber6:5.0.0-RC-1'
+     
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+   
 }
 
 task cucumber() {
